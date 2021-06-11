@@ -7,6 +7,17 @@
     <title>Document</title>
 </head>
 <body>
-    Home Page
+    <h1>Lista viaggi</h1>
+
+    <ul>
+        @foreach ($travels as $travel)
+            <li>
+                <h2>Località: {{ $travel->località }},</h2>
+                <h3>Prezzo: {{ $travel->prezzo }} €,</h3>
+                <div>Viaggio in: {{ $travel->tipo_viaggio }},</div>
+                <div>Tipologia: {{ $travel->tipo_località }}.</div>
+            </li>
+        @endforeach
+    </ul>
 </body>
 </html>
